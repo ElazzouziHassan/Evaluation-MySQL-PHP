@@ -3,11 +3,6 @@ include 'voitureElectrique.class.php';
 
 if (isset($_POST['matricule'], $_POST['marque'], $_POST['modele'], $_POST['annee'])) {
   
-  $matricule = $_POST['matricule'];
-  $marque = $_POST['marque'];
-  $modele = $_POST['modele'];
-  $annee = $_POST['annee'];
-
   if ($_POST['autonomie'] == '') {
     $voiture = new voiture($_POST['matricule'], $_POST['marque'], $_POST['modele'], $_POST['annee']);
   } else {
