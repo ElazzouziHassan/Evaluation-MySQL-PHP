@@ -14,12 +14,12 @@ class voitureElectrique extends voiture
 
     public function AfficherAutonomie()
     {
-        echo "Autonomie : {$this->autonomie} km";
+        echo "Autonomie : {$this->autonomie}";
     }
 
     public function Afficher()
     {
         parent::Afficher();
-        echo "Autonomie : {$this->autonomie} km";
+        echo "Autonomie : {$this->autonomie}";
     }
 }
