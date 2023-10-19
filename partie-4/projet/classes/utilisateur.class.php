@@ -14,7 +14,7 @@ class Utilisateur {
       $this->_nom = $nvNom;
   }
 
-  public function set_prenom($nvPrenom) {
+  public function setPrenom($nvPrenom) {
     if (strlen($nvPrenom) == 0) 
         exit("Utilisateur : le nom est obligatoire");  
 
@@ -46,5 +46,21 @@ class Utilisateur {
       $this->_id = $nvID;
   }
 
+  public function enregistrer(Mysql $bdd){
+    $req = `
+      INSERT INTO 
+        utilisateur (id, nom, prenom, d_naissance, mail, mdp) 
+        VALUES (
+          null, 
+          '$this->_nom', 
+          '$this->_prenom', 
+          '$this->_d_naissance', 
+          '$this->_mail', 
+          '$this->_mdp'
+        )
+      `;
+    
+    return $bdd->requete($req);
+  }
 
 }
