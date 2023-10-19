@@ -3,7 +3,7 @@
 
 class Mysql {
   private $_serveur = "localhost";
-  private $_login = "";
+  private $_login = "root";
   private $_mdp = "";
   private $_bdd = "";
   private $_cnx = null;
