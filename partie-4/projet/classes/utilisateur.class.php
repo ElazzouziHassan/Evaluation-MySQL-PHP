@@ -28,7 +28,7 @@ class Utilisateur {
     $this->_mail = $nvMail;
   }
 
-  public function set_mdp($nvMDP) {
+  public function setMDP($nvMDP) {
       if (empty($nvMDP)) {
           $nvMDP = "1234";
       }
@@ -45,4 +45,6 @@ class Utilisateur {
   public function setID($nvID) {
       $this->_id = $nvID;
   }
+
+  
 }
