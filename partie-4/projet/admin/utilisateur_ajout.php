@@ -7,5 +7,8 @@
 </head>
 <body>
   <h1>Ajouter nouvel utilisateur</h1>
+  <form  id="form1" name="form1" method="post" action="utilisateur_ajout_action.php">
+    
+  </form>
 </body>
 </html>
