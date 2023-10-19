@@ -14,4 +14,3 @@ if ($user->enregistrer($bdd)) {
 } else {
     echo "Erreur lors de l'ajout de l'utilisateur.";
 }
-?>
