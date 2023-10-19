@@ -4,7 +4,7 @@ class Utilisateur {
   private $_nom;
   private $_prenom;
   private $_mail;
-  private $_mdp;
+  private $_mdp = "1234";
   private $_d_naissance;
 
   public function setNom($nvNom) {
@@ -46,5 +46,5 @@ class Utilisateur {
       $this->_id = $nvID;
   }
 
-  
+
 }
