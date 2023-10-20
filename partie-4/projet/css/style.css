@@ -1,4 +1,3 @@
-/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +54,6 @@ form input[type="submit"]:hover {
   background-color: #2980b9;
 }
 
-/* Add media queries for responsiveness */
 @media (max-width: 600px) {
   form {
       width: 90%;
