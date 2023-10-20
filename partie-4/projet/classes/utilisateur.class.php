@@ -22,7 +22,7 @@ class Utilisateur {
   }
 
   public function setMail($nvMail) {
-    if (strlen($nvMail) < 5 or strlen($nvMail) > 15) 
+    if (strlen($nvMail) < 5 or strlen($nvMail) > 50) 
       exit("Non Valide mail !"); 
 
     $this->_mail = $nvMail;
