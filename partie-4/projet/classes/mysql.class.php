@@ -1,10 +1,9 @@
 <?php
-class Mysql
-{
+class Mysql {
     private $_serveur = "localhost";
-    private $_login = "root";
-    private $_mdp = "";
-    private $_bdd = "travail_collaboratif";
+    private $_login;
+    private $_mdp;
+    private $_bdd;
     private $_cnx;
 
     public function setServeur($serveur) {
@@ -30,8 +29,11 @@ class Mysql
     public function connexion() {
       $this->_cnx = new mysqli($this->_serveur, $this->_login, $this->_mdp, $this->_bdd);
 
-      if ($this->_cnx->connect_error)
-        exit("Erreur de connexion bdd : " . $this->_cnx->connect_error);
+      if (!$this->_cnx) 
+        die("Erreur de connexion à la base de données : " . mysqli_connect_error());
+
+      if (!mysqli_select_db($this->_cnx, $this->_bdd)) 
+        die("Erreur : base de données inexistante : " . mysqli_error($this->_cnx));
     
     }
 
