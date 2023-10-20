@@ -56,5 +56,30 @@ class Utilisateur {
     }
   }
 
-  
+  public function getMail() {
+    return $this->_mail;
+  }
+
+  public function getID() {
+    return $this->_id;
+  }
+
+  public function getNom(){
+    return $this->_nom;
+  }
+
+  public function getPrenom() {
+    return $this->_prenom;
+  }
+
+  public function getMDP() {
+      return $this->_mdp;
+  }
+
+  public function getDNaissance() {
+    return $this->_d_naissance;
+  }
+
+
+
 }
