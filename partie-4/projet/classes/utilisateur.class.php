@@ -80,6 +80,45 @@ class Utilisateur {
     return $this->_d_naissance;
   }
 
+  public function getOne(Mysql $bdd, $id) {
+    
+    $req = "SELECT * FROM utilisateur WHERE id = $id";
+    $res = $bdd->requete($req);
 
+    if ($row = $res->fetch_assoc()) {
+      $u = new Utilisateur();
+      $u->setID($row['id']);
+      $u->setNom($row['nom']);
+      $u->setPrenom($row['prenom']);
+      $u->setDNaissance($row['date-naissance']);
+      $u->setMail($row['mail']);
+      
+      return $u;
+    }
+    
+    return null; 
+  }
+
+  public function getListe(Mysql $bdd, $order_by = 'id', $order_type = 'ASC') {
+    
+    $req = "SELECT * FROM utilisateur ORDER BY $order_by $order_type";
+    $res = $bdd->requete($req);
+    
+    $user = [];
+    
+    while ($row = $res->fetch_assoc()) {
+      $u = new Utilisateur();
+      $u->setID($row['id']);
+      $u->setNom($row['nom']);
+      $u->setPrenom($row['prenom']);
+      $u->setDNaissance($row['date-naissance']);
+      $u->setMail($row['mail']);
+      
+      $user[] = $u;
+    
+    }
+      
+    return $user;
+  }
 
 }
