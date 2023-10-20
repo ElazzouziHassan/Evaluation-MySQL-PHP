@@ -8,6 +8,32 @@ class Utilisateur {
   private $_mail;
   private $_mdp = '1234'; 
   
+  // !Getters :
+  public function getMail() {
+    return $this->_mail;
+  }
+  
+  public function getID() {
+    return $this->_id;
+  }
+  
+  public function getNom() {
+    return $this->_nom;
+  }
+  
+  public function getPrenom() {
+    return $this->_prenom;
+  }
+  
+  public function getMDP() {
+      return $this->_mdp;
+  }
+  
+  public function getDNaissance() {
+    return $this->_d_naissance;
+  }
+  
+  // !Setters :
   public function setNom($nom) {
     if ($nom === null || strlen($nom) == 0)
     exit("Utilisateur : le nom est obligatoire");
@@ -41,6 +67,7 @@ class Utilisateur {
     $this->_id = $id;
   }
   
+  // !Methods :
   public function enregistrer(Mysql $bdd) {
     $req = "INSERT INTO utilisateur (id, nom, prenom, d_naissance, mail, mdp) 
               VALUES (null, '$this->_nom', '$this->_prenom', '$this->_d_naissance', '$this->_mail', '$this->_mdp')";
@@ -56,31 +83,15 @@ class Utilisateur {
     }
   }
 
-  public function getMail() {
-    return $this->_mail;
+  public function modifier(Mysql $bdd) {
+    $req = "UPDATE utilisateur SET nom = '$this->_nom', prenom = '$this->_prenom', mail = '$this->_mail', mdp = '$this->_mdp', d_naissance = '$this->_d_naissance' WHERE id = $this->_id";
+    
+    return $bdd->requete($req);
+    
   }
 
-  public function getID() {
-    return $this->_id;
-  }
 
-  public function getNom(){
-    return $this->_nom;
-  }
-
-  public function getPrenom() {
-    return $this->_prenom;
-  }
-
-  public function getMDP() {
-      return $this->_mdp;
-  }
-
-  public function getDNaissance() {
-    return $this->_d_naissance;
-  }
-
-  public function getOne(Mysql $bdd, $id) {
+  public static function getOne(Mysql $bdd, $id) {
     
     $req = "SELECT * FROM utilisateur WHERE id = $id";
     $res = $bdd->requete($req);
@@ -90,35 +101,36 @@ class Utilisateur {
       $u->setID($row['id']);
       $u->setNom($row['nom']);
       $u->setPrenom($row['prenom']);
-      $u->setDNaissance($row['date-naissance']);
+      $u->setDNaissance($row['d_naissance']);
       $u->setMail($row['mail']);
       
       return $u;
+
     }
     
     return null; 
   }
 
-  public function getListe(Mysql $bdd, $order_by = 'id', $order_type = 'ASC') {
+  public static function getListe(Mysql $bdd, $order_by = 'id', $order_type = 'ASC') {
     
     $req = "SELECT * FROM utilisateur ORDER BY $order_by $order_type";
     $res = $bdd->requete($req);
     
-    $user = [];
+    $users = [];
     
     while ($row = $res->fetch_assoc()) {
       $u = new Utilisateur();
       $u->setID($row['id']);
       $u->setNom($row['nom']);
       $u->setPrenom($row['prenom']);
-      $u->setDNaissance($row['date-naissance']);
+      $u->setDNaissance($row['d_naissance']);
       $u->setMail($row['mail']);
       
-      $user[] = $u;
+      $users[] = $u;
     
     }
       
-    return $user;
+    return $users;
   }
 
 }
