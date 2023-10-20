@@ -63,4 +63,12 @@ class Utilisateur {
     return $bdd->requete($req);
   }
 
+  public function supprimer(Mysql $bdd){
+
+    if ($this->_id) {
+      $req = "DELETE FROM utilisateur WHERE id = $this->_id";
+      return $bdd->requete($req);
+    }
+  }
+
 }
