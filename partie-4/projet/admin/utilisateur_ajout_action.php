@@ -4,14 +4,12 @@ include("..\classes\utilisateur.class.php");
 
 
 $user = new Utilisateur();
-$user->setNom($_POST['nom']);
-$user->setPrenom($_POST['prenom']);
-$user->setMail($_POST['mail']);
-$user->setMDP($_POST['mdp']);
-$user->setDNaissance($_POST['date-naissance']);
+$user->setNom($_REQUEST['nom']);
+$user->setPrenom($_REQUEST['prenom']);
+$user->setMail($_REQUEST['mail']);
+$user->setMDP($_REQUEST['mdp']);
+$user->setDNaissance($_REQUEST['date-naissance']);
 
-if ($user->enregistrer($bdd)) {
-    echo "User has been added succefully.";
-} else {
-    echo "ERROR : Failed to add this user !";
-}
+if ($user->enregistrer($bdd))
+    header("location:..\admin\utilisateurs_liste.php");
+
