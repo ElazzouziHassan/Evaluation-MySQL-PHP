@@ -1,5 +1,6 @@
 <?php
 class Mysql {
+
     private $_serveur = "localhost";
     private $_login;
     private $_mdp;
@@ -30,10 +31,10 @@ class Mysql {
       $this->_cnx = new mysqli($this->_serveur, $this->_login, $this->_mdp, $this->_bdd);
 
       if (!$this->_cnx) 
-        die("Erreur de connexion à la base de données : " . mysqli_connect_error());
+        exit("Erreur de connexion à la base de données : " . mysqli_connect_error());
 
       if (!mysqli_select_db($this->_cnx, $this->_bdd)) 
-        die("Erreur : base de données inexistante : " . mysqli_error($this->_cnx));
+        exit("Erreur : base de données inexistante : " . mysqli_error($this->_cnx));
     
     }
 
@@ -44,6 +45,10 @@ class Mysql {
         exit("<pre>Erreur dans la requête [$req] : " . $this->_cnx->error . "</pre>");
 
       return $res;
+    }
+
+    public function deconnexion() {
+      $this->_cnx->close();
     }
 
 }
