@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
   padding: 0;
   margin: 0;
@@ -7,13 +6,11 @@
   box-sizing: border-box;
 }
 
-/* Apply a background color to the entire page */
 body {
   background-color: #f2f2f2;
   font-family: Arial, sans-serif;
 }
 
-/* Style the form container */
 #form1 {
   width: 400px;
   margin: 0 auto;
@@ -24,7 +21,6 @@ body {
   margin-top: 50px;
 }
 
-/* Style the form fields and labels */
 #form1 input[type="text"],
 #form1 input[type="email"],
 #form1 input[type="password"],
@@ -50,19 +46,16 @@ body {
   background-color: #555;
 }
 
-/* Center the form on the page */
 #form1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Add some spacing to labels */
 #form1 label {
   margin-top: 10px;
 }
 
-/* Style the title */
 h1 {
   text-align: center;
   font-size: 24px;
@@ -70,7 +63,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Add responsive styles for smaller screens */
 @media (max-width: 768px) {
   #form1 {
     width: 80%;
