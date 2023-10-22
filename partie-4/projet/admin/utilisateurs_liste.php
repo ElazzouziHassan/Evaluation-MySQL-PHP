@@ -36,7 +36,9 @@ $utilisateurs = Utilisateur::getListe($bdd);
         <?php endforeach; ?>
     </table>
     <div class="center-button">
-        <form action="../admin/utilisateur_ajout.php"><input type="submit" value="Ajouter un nouveau utilisateur"></form>
+        <form action="../admin/utilisateur_ajout.php">
+            <input id="btn" type="submit" value="Ajouter un nouveau utilisateur">
+        </form>
     </div>
 </body>
 </html>
