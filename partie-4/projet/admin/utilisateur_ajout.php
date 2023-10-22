@@ -20,7 +20,5 @@
         <input type="date" name="date-naissance" id="date-naissance"><br>
         <input type="submit" name="btn-ajouter" value="Ajouter">
     </form>
-
-    <script src="../js/script.js"></script>
 </body>
 </html>
