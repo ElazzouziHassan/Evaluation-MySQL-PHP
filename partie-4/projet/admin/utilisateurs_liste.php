@@ -8,12 +8,10 @@ $utilisateurs = Utilisateur::getListe($bdd);
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Liste des Utilisateurs</title>
     <link rel="stylesheet" href="../css/utilisateur.css">
 </head>
-
 <body>
     <h2>Liste des Utilisateurs</h2>
     <table border="1">
@@ -35,13 +33,10 @@ $utilisateurs = Utilisateur::getListe($bdd);
                     <a href="utilisateur_supp_action.php?id=<?= $utilisateur->getID() ?>">Supprimer</a>
                 </td>
             </tr>
-
-
         <?php endforeach; ?>
     </table>
     <div class="center-button">
         <form action="../admin/utilisateur_ajout.php"><input type="submit" value="Ajouter un nouveau utilisateur"></form>
     </div>
 </body>
-
 </html>
