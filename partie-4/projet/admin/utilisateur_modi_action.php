@@ -64,7 +64,7 @@ if (isset($_GET['id'])) {
 </html>
 
 <?php
-        }
+    }
     } 
     else {
         echo "Utilisateur introuvable.";
