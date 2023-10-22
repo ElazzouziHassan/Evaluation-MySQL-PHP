@@ -1,0 +1,78 @@
+/* Reset some default styles */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Apply a background color to the entire page */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the form container */
+#form1 {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+/* Style the form fields and labels */
+#form1 input[type="text"],
+#form1 input[type="email"],
+#form1 input[type="password"],
+#form1 input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form1 input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form1 input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Center the form on the page */
+#form1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add some spacing to labels */
+#form1 label {
+  margin-top: 10px;
+}
+
+/* Style the title */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #form1 {
+    width: 80%;
+  }
+}
