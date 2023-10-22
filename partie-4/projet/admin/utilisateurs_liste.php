@@ -10,7 +10,7 @@ $utilisateurs = Utilisateur::getListe($bdd);
 <html>
 <head>
     <title>Liste des Utilisateurs</title>
-    <link rel="stylesheet" href="../css/utilisateur.css">
+    <link rel="stylesheet" href="../css/liste-utilisateurs.css">
 </head>
 <body>
     <h2>Liste des Utilisateurs</h2>
