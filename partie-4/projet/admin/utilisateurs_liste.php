@@ -4,8 +4,8 @@ include("../classes/utilisateur.class.php");
 
 $utilisateurs = Utilisateur::getListe($bdd);
 
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
