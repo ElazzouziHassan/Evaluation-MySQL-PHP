@@ -2,7 +2,6 @@
 include("..\inc\connection.php");
 include("..\classes\utilisateur.class.php");
 
-
 $user = new Utilisateur();
 $user->setNom($_REQUEST['nom']);
 $user->setPrenom($_REQUEST['prenom']);
