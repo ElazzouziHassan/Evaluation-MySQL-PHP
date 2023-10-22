@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
             $u->setDNaissance($_POST['date-naissance']);
 
             if ($u->modifier($bdd)) {
-                echo "Modification de l'utilisateur OK.";
+                header("location:..\admin\utilisateurs_liste.php");
             } 
             else {
                 echo "Erreur lors de la modification de l'utilisateur.";
@@ -57,7 +57,7 @@ if (isset($_GET['id'])) {
             <input type="submit" value="Ajouter un nouveau utilisateur">
         </form>
             
-        <form action="">
+        <form action="../admin/utilisateurs_liste.php">
             <input type="submit" value="Retour à la liste des utilisateur">
         </form>
     </body>
