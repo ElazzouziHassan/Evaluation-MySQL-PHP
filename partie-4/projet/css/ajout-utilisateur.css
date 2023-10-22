@@ -21,6 +21,7 @@ body {
   margin-top: 50px;
 }
 
+
 #form1 input[type="text"],
 #form1 input[type="email"],
 #form1 input[type="password"],
@@ -67,4 +68,24 @@ h1 {
   #form1 {
     width: 80%;
   }
+}
+.ajt-uti{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#btn{
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btn:hover{
+  background-color: #555;
 }
