@@ -20,5 +20,10 @@
         <input type="date" name="date-naissance" id="date-naissance"><br>
         <input type="submit" name="btn-ajouter" value="Ajouter">
     </form>
+    <div class="ajt-uti">
+        <form action="../admin/utilisateurs_liste.php">
+            <input id="btn" type="submit" value="Retour à la liste des utilisateur">
+        </form>
+    </div>
 </body>
 </html>
