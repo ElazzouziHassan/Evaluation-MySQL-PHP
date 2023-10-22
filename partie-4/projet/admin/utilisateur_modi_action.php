@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     $u = Utilisateur::getOne($bdd, $id);
 
     if ($u) {
-        
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $u->setNom($_POST['nom']);
@@ -19,12 +19,14 @@ if (isset($_GET['id'])) {
 
             if ($u->modifier($bdd)) {
                 echo "Modification de l'utilisateur OK.";
-            } else {
+            } 
+            else {
                 echo "Erreur lors de la modification de l'utilisateur.";
             }
-        } else {
-
+        } 
+        else {
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,11 +63,13 @@ if (isset($_GET['id'])) {
 </html>
 
 <?php
-    }
-    } else {
+        }
+    } 
+    else {
         echo "Utilisateur introuvable.";
     }
-    } else {
+    } 
+    else {
         echo "ID de l'utilisateur non spécifié.";
     }
 ?>
