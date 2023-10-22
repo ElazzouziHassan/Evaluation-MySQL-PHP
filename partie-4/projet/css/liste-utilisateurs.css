@@ -1,0 +1,77 @@
+/* Reset some default styles */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Apply a background color to the entire page */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the title */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Style the table */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Style table header */
+table th {
+  background-color: #333;
+  color: white;
+}
+
+/* Alternate row colors for better readability */
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style links in the "Actions" column */
+table a {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+table a:hover {
+  background-color: #555;
+}
+
+/* Center the button */
+.center-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+}
