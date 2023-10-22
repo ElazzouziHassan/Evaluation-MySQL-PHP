@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ajout-utilisateur.css">
     <title>Ajouter un utilisateur</title>
 </head>
 <body>
     <form id="form1" name="form1" method="post" action="utilisateur_ajout_action.php">
-        NOM* : 
+        NOM*
         <input type="text" name="nom" id="nom" required><br>
-        PRENOM* : 
+        PRENOM*
         <input type="text" name="prenom" id="prenom" required><br>
-        MAIL* : 
+        MAIL*
         <input type="email" name="mail" id="mail" required><br>
-        PASSWORD : 
+        PASSWORD
         <input type="password" name="mdp" id="mdp"><br>
-        DATE DE NAISSANCE : 
+        DATE DE NAISSANCE
         <input type="date" name="date-naissance" id="date-naissance"><br>
         <input type="submit" name="btn-ajouter" value="Ajouter">
     </form>
-
 
     <script src="../js/script.js"></script>
 </body>
