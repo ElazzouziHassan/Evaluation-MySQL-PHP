@@ -31,6 +31,7 @@ if (isset($_GET['id'])) {
 <html>
     <head>
         <title>Modifier un Utilisateur</title>
+        <link rel="stylesheet" href="../css/modifier-utilisateur.css">
     </head>
     <body>
         <h2>Modifier un Utilisateur</h2>
