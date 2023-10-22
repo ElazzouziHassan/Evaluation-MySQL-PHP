@@ -54,11 +54,11 @@ if (isset($_GET['id'])) {
             <input type="submit" name="modifier" value="Modifier">
         </form>
         <form action="../admin/utilisateur_ajout.php">
-            <input type="submit" value="Ajouter un nouveau utilisateur">
+            <input id="btn" type="submit" value="Ajouter un nouveau utilisateur">
         </form>
             
         <form action="../admin/utilisateurs_liste.php">
-            <input type="submit" value="Retour à la liste des utilisateur">
+            <input id="btn" type="submit" value="Retour à la liste des utilisateur">
         </form>
     </body>
 </html>
