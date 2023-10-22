@@ -26,7 +26,7 @@ class Utilisateur {
   }
   
   public function getMDP() {
-      return $this->_mdp;
+    return $this->_mdp;
   }
   
   public function getDNaissance() {
@@ -72,8 +72,7 @@ class Utilisateur {
   
   // !Methods :
   public function enregistrer(Mysql $bdd) {
-    $req = "INSERT INTO utilisateur (id, nom, prenom, d_naissance, mail, mdp) 
-              VALUES (null, '$this->_nom', '$this->_prenom', '$this->_d_naissance', '$this->_mail', '$this->_mdp')";
+    $req = "INSERT INTO utilisateur (id, nom, prenom, d_naissance, mail, mdp) VALUES (null, '$this->_nom', '$this->_prenom', '$this->_d_naissance', '$this->_mail', '$this->_mdp')";
 
       return $bdd->requete($req);
     }
@@ -91,7 +90,6 @@ class Utilisateur {
     return $bdd->requete($req);
     
   }
-
 
   public static function getOne(Mysql $bdd, $id) {
     
